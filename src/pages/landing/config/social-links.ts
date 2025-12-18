@@ -4,9 +4,9 @@ type SocialLink = {
 	link: string
 }
 
-import TelegramIcon from '../shared/assets/icons-tsx/TelegramIcon'
-import WhatsAppIcon from '../shared/assets/icons-tsx/WhatsAppIcon'
-import InstagramIcon from '../shared/assets/icons-tsx/InstagramIcon'
+import TelegramIcon from '../../../shared/assets/icons-tsx/TelegramIcon'
+import WhatsAppIcon from '../../../shared/assets/icons-tsx/WhatsAppIcon'
+import InstagramIcon from '../../../shared/assets/icons-tsx/InstagramIcon'
 
 const socialLinks: SocialLink[] = [
 	{ placeholder: 'Telegram', icon: TelegramIcon, link: '#telegram' },

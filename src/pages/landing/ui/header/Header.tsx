@@ -1,6 +1,6 @@
-import { Link, NavLink } from 'react-router'
+import { Link } from 'react-router'
 import { FiMenu, FiX } from 'react-icons/fi'
-import navLinks from '../../../../config/nav-links'
+import navLinks from '../../config/nav-links'
 import { useState } from 'react'
 
 export const Header: React.FC = () => {
@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 		<header className={`bg-background-alt duration-300' } fixed top-0 z-50 w-full transition-colors`}>
 			<nav className="p-4 md:p-6 xl:p-8">
 				<div className="container mx-auto flex items-center justify-between">
-					<div>KVADRAT.KG</div>
+					<span className='text-2xl font-medium'>KVADRAT.KG</span>
 					<ul className="hidden gap-4 md:flex">
 						{navLinks.map((link, i) => (
 							<li key={i}>
