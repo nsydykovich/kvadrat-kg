@@ -1,14 +1,16 @@
-import headerBg from '../../../../shared/assets/background/header.png'
-import InstagramIcon from '../../../../shared/assets/icons-tsx/InstagramIcon'
-import TelegramIcon from '../../../../shared/assets/icons-tsx/TelegramIcon'
-import WhatsAppIcon from '../../../../shared/assets/icons-tsx/WhatsAppIcon'
-import CheckCircleIcon from '../../../../shared/assets/icons-tsx/CheckCircleIcon'
+import headerBg from '@/shared/assets/background/header.png'
+import InstagramIcon from '@/shared/assets/icons-tsx/InstagramIcon.tsx'
+import TelegramIcon from '@/shared/assets/icons-tsx/TelegramIcon.tsx'
+import WhatsAppIcon from '@/shared/assets/icons-tsx/WhatsAppIcon.tsx'
+import CheckCircleIcon from '@/shared/assets/icons-tsx/CheckCircleIcon.tsx'
+import { Button } from '@/shared/ui/Button.tsx'
+import { Link } from 'react-router-dom'
 
-function Heading() {
+function LandingHero() {
 	return (
 		<section>
 			<div
-				className="absolute top-0 left-0 -z-50 h-full w-full bg-black/20 mask-b-from-0% mask-b-to-90% bg-cover bg-center bg-blend-overlay"
+				className="bg-background/20 absolute top-0 left-0 -z-50 h-full w-full mask-b-from-0% mask-b-to-90% bg-cover bg-center bg-blend-overlay"
 				style={{ backgroundImage: `url(${headerBg})` }}
 			/>
 			<div className="z-auto flex min-h-svh flex-col items-end justify-center py-8 md:items-center">
@@ -31,24 +33,30 @@ function Heading() {
 						</li>
 					</ul>
 					<div className="flex justify-center md:justify-between">
-						<button className="bg-background-alt rounded-full px-6 py-3 md:px-8 md:py-4 md:text-[20px]">
-							Получить консультацию от риэлтора
-						</button>
-						<ol className="bg-background-alt hidden gap-4 divide-x divide-white/80 rounded-full px-9 py-3 md:flex md:items-center">
+						<Button className="rounded-full px-6 py-3 md:px-8 md:py-4 md:text-[20px]" asChild>
+							<Link to={'#'}>Получить консультацию от риэлтора</Link>
+						</Button>
+						<ol className="bg-primary divide-foreground/80 hidden gap-4 divide-x rounded-full px-9 py-2 md:flex md:items-center">
 							<li className="not-last:pr-4">
-								<a href="#">
-									<TelegramIcon className="h-6 w-6 md:h-8 md:w-8" />
-								</a>
+								<Button variant={'ghost'} size={'sm'} asChild>
+									<a href="#">
+										<TelegramIcon className="h-6 w-6 md:h-8 md:w-8" />
+									</a>
+								</Button>
 							</li>
 							<li className="not-last:pr-4">
-								<a href="#">
-									<WhatsAppIcon className="h-6 w-6 md:h-8 md:w-8" />
-								</a>
+								<Button variant={'ghost'} size={'sm'} asChild>
+									<a href="#">
+										<WhatsAppIcon className="h-6 w-6 md:h-8 md:w-8" />
+									</a>
+								</Button>
 							</li>
 							<li className="not-last:pr-4">
-								<a href="#">
-									<InstagramIcon className="h-6 w-6 md:h-8 md:w-8" />
-								</a>
+								<Button variant={'ghost'} size={'sm'} asChild>
+									<a href="#">
+										<InstagramIcon className="h-6 w-6 md:h-8 md:w-8" />
+									</a>
+								</Button>
 							</li>
 						</ol>
 					</div>
@@ -58,4 +66,4 @@ function Heading() {
 	)
 }
 
-export default Heading
+export default LandingHero

@@ -1,10 +1,10 @@
-export default function About() {
+export const AboutPage = () => {
 	return (
 		<div className="mt-30 text-xl">
 			<div className="flex items-center justify-center py-12">
-				<div className="grow border-t border-neutral-600"></div>
+				<div className="grow border-t-2 border-neutral-600"></div>
 				<h1 className="mx-4 uppercase">О Компании</h1>
-				<div className="grow border-t border-neutral-600"></div>
+				<div className="grow border-t-2 border-neutral-600"></div>
 			</div>
 
 			<div className="container mx-auto px-2">

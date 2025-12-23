@@ -1,16 +1,16 @@
-import { Link } from 'react-router'
 import { FiMenu, FiX } from 'react-icons/fi'
-import navLinks from '../../config/nav-links'
+import navLinks from '@/shared/config/nav-links.ts'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-export const Header: React.FC = () => {
+export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
-		<header className={`bg-background-alt duration-300' } fixed top-0 z-50 w-full transition-colors`}>
+		<header className={`bg-primary duration-300' } fixed top-0 z-50 w-full transition-colors`}>
 			<nav className="p-4 md:p-6 xl:p-8">
 				<div className="container mx-auto flex items-center justify-between">
-					<span className='text-2xl font-medium'>KVADRAT.KG</span>
+					<span className="text-2xl font-medium">KVADRAT.KG</span>
 					<ul className="hidden gap-4 md:flex">
 						{navLinks.map((link, i) => (
 							<li key={i}>
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
 					<div className="flex items-center md:hidden">
 						<button
 							onClick={() => setIsOpen(!isOpen)}
-							className="text-white focus:outline-none"
+							className="text-foreground focus:outline-none"
 							aria-label="Toggle menu"
 						>
 							{isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -31,10 +31,10 @@ export const Header: React.FC = () => {
 			</nav>
 
 			{isOpen && (
-				<nav className="fixed top-14 right-0 w-3/4 bg-[#A40A00] pl-8 pt-4 pb-4 md:hidden">
-					<ul className="flex flex-col gap-4 text-[16px] divide-y divide-gray-50/50 text-white">
+				<nav className="bg-accent fixed top-14 right-0 w-3/4 pt-4 pb-4 pl-8 md:hidden">
+					<ul className="divide-foreground text-foreground flex flex-col gap-4 divide-y text-[16px]">
 						{navLinks.map((link, i) => (
-							<li key={i} className='pb-4'>
+							<li key={i} className="pb-4">
 								<Link onClick={() => setIsOpen(false)} to={link.path}>
 									{link.name}
 								</Link>

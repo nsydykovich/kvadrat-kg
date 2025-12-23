@@ -1,6 +1,7 @@
-import { Link } from "react-router"
+import { PathConstants } from '@/shared/config/path-constants.ts'
+import { Link } from 'react-router-dom'
 
-const NotFound = () => {
+export const NotFoundPage = () => {
 	return (
 		<main className="grid h-svh min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
 			<div className="text-center">
@@ -13,7 +14,7 @@ const NotFound = () => {
 				</p>
 				<div className="mt-10 flex items-center justify-center gap-x-6">
 					<Link
-						to={"/"}
+						to={PathConstants.HOME}
 						className="rounded-md bg-red-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-red-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
 					>
 						Главная страница
@@ -26,5 +27,3 @@ const NotFound = () => {
 		</main>
 	)
 }
-
-export default NotFound

@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
-import { RouterProvider } from 'react-router'
-import './index.css'
-import { myRouter } from './route'
+import { AppRouter } from './providers/router/AppRouter'
 import { useScrollStore } from './store/UseScrollStore'
+import '@/app/styles/fonts.css'
+import '@/app/styles/index.css'
+import { Providers } from '@/app/providers'
 
 export function App() {
 	const setScrolled = useScrollStore((state) => state.setScrolled)
@@ -15,5 +16,9 @@ export function App() {
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [setScrolled])
-	return <RouterProvider router={myRouter} />
+	return (
+		<Providers>
+			<AppRouter />
+		</Providers>
+	)
 }
