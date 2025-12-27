@@ -1,19 +1,20 @@
-import type { ButtonHTMLAttributes } from 'react'
+import { type ButtonHTMLAttributes, forwardRef } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { cn } from '@/shared/lib/utils'
 import { Slot } from 'radix-ui'
+import { cn } from '@/shared/lib/utils.ts'
 
 const buttonVariants = cva(
-	'px-6 py-3 rounded-lg transition-all items-center justify-center font-medium flex cursor-pointer',
+	'px-6 py-3 rounded-lg transition-all items-center justify-center font-medium flex',
 	{
 		variants: {
 			variant: {
-				primary: 'bg-primary text-white hover:bg-primary-hover active:bg-primary-active',
-				secondary: 'bg-secondary text-white hover:bg-secondary-hover active:bg-secondary-active',
-				destructive: 'bg-destructive text-white hover:bg-destructive-hover active:bg-destructive-active',
-				muted: 'bg-muted text-white hover:bg-muted-hover active:bg-muted-active',
-				outline: 'border border-white text-white hover:bg-foreground hover:text-background',
-				ghost: 'bg-transparent text-white hover:bg-white/10'
+				primary: 'bg-primary text-foreground hover:bg-primary-hover active:bg-primary-active',
+				secondary: 'bg-secondary text-foreground hover:bg-secondary-hover active:bg-secondary-active',
+				destructive: 'bg-destructive text-foreground hover:bg-destructive-hover active:bg-destructive-active',
+				muted: 'bg-muted text-foreground hover:bg-muted-hover active:bg-muted-active',
+				outline: 'border border-foreground text-foreground hover:bg-foreground hover:text-background',
+				link: 'bg-transparent text-foreground hover:underline p-0! cursor-pointer',
+				ghost: 'bg-transparent text-foreground hover:bg-foreground/10'
 			},
 			size: {
 				sm: 'text-sm px-4 py-2',
@@ -33,8 +34,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantPr
 	asChild?: boolean
 }
 
-export const Button = ({ className, variant, size, asChild, ...props }: ButtonProps) => {
-	const Comp = asChild ? Slot.Root : 'button'
-
-	return <Comp className={cn(buttonVariants({ variant, size, className }))} {...props} />
-}
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+	({ className, variant, size, asChild = false, ...props }, ref) => {
+		const Comp = asChild ? Slot.Root : 'button'
+		return <Comp ref={ref} className={cn(buttonVariants({ variant, size, className }))} {...props} />
+	}
+)

@@ -1,5 +1,3 @@
-import { Card } from '@/shared/ui/Card.tsx'
-
 export const Footer = () => {
 	return (
 		<footer className={'bg-footer py-8'}>
@@ -9,9 +7,7 @@ export const Footer = () => {
 						<h5 className="uppercase">kvadrat.kg</h5>
 					</section>
 					<section>
-						<Card title={'Hello'} description={'This is hello world card'}>
-							Привет
-						</Card>
+						<h5 className="uppercase">kvadrat.kg</h5>
 					</section>
 					<section>
 						<h5 className="uppercase">kvadrat.kg</h5>

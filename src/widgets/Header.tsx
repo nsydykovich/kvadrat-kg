@@ -2,6 +2,7 @@ import { FiMenu, FiX } from 'react-icons/fi'
 import navLinks from '@/shared/config/nav-links.ts'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from '@/shared/ui/Button.tsx'
 
 export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +15,9 @@ export const Header = () => {
 					<ul className="hidden gap-4 md:flex">
 						{navLinks.map((link, i) => (
 							<li key={i}>
-								<Link to={link.path}>{link.name}</Link>
+								<Button variant={'link'}>
+									<Link to={link.path}>{link.name}</Link>
+								</Button>
 							</li>
 						))}
 					</ul>
@@ -35,9 +38,11 @@ export const Header = () => {
 					<ul className="divide-foreground text-foreground flex flex-col gap-4 divide-y text-[16px]">
 						{navLinks.map((link, i) => (
 							<li key={i} className="pb-4">
-								<Link onClick={() => setIsOpen(false)} to={link.path}>
-									{link.name}
-								</Link>
+								<Button variant={'link'}>
+									<Link onClick={() => setIsOpen(false)} to={link.path}>
+										{link.name}
+									</Link>
+								</Button>
 							</li>
 						))}
 					</ul>

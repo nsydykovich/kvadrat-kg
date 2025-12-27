@@ -1,3 +1,7 @@
+
 export interface Service {
-	description: string
+	id: number
+	title: string
+	icon:  React.ElementType
+	description: undefined | string
 }

@@ -1,6 +1,8 @@
+import { Button } from '@/shared/ui/Button.tsx'
+
 export const AboutPage = () => {
 	return (
-		<div className="mt-30 text-xl">
+		<div className="my-30 text-xl">
 			<div className="flex items-center justify-center py-12">
 				<div className="grow border-t-2 border-neutral-600"></div>
 				<h1 className="mx-4 uppercase">О Компании</h1>
@@ -67,9 +69,11 @@ export const AboutPage = () => {
 			</div>
 
 			<div className="container mx-auto px-2">
-				<a href="#" className="block py-4">
-					Поделиться своим выбором с друзьями в соц.сетях
-				</a>
+				<Button variant={'link'}>
+					<a href="#" className="block py-4">
+						Поделиться своим выбором с друзьями в соц.сетях
+					</a>
+				</Button>
 				<hr className="border-neutral-600" />
 			</div>
 		</div>
