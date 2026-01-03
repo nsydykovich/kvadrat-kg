@@ -1,10 +1,14 @@
 import headerBg from '@/shared/assets/background/header.png'
-import InstagramIcon from '@/shared/assets/icons-tsx/InstagramIcon.tsx'
-import TelegramIcon from '@/shared/assets/icons-tsx/TelegramIcon.tsx'
-import WhatsAppIcon from '@/shared/assets/icons-tsx/WhatsAppIcon.tsx'
-import CheckCircleIcon from '@/shared/assets/icons-tsx/CheckCircleIcon.tsx'
 import { Button } from '@/shared/ui/Button.tsx'
 import { Link } from 'react-router-dom'
+import { CheckCircleIcon, InstagramIcon, TelegramIcon, WhatsAppIcon } from '@/shared/ui/Icons'
+import socialLinks, { type SocialType } from '@/shared/config/social-links'
+
+const HEADER_ICONS: Record<SocialType, React.ElementType> = {
+	Telegram: TelegramIcon,
+	WhatsApp: WhatsAppIcon,
+	Instagram: InstagramIcon
+}
 
 function LandingHero() {
 	return (
@@ -36,28 +40,22 @@ function LandingHero() {
 						<Button className="rounded-full px-6 py-3 md:px-8 md:py-4 md:text-[20px]" asChild>
 							<Link to={'#'}>Получить консультацию от риэлтора</Link>
 						</Button>
-						<ol className="bg-primary divide-foreground/80 hidden gap-4 divide-x rounded-full px-9 py-2 md:flex md:items-center">
-							<li className="not-last:pr-4">
-								<Button variant={'ghost'} size={'sm'} asChild>
-									<a href="#">
-										<TelegramIcon className="h-6 w-6 md:h-8 md:w-8" />
-									</a>
-								</Button>
-							</li>
-							<li className="not-last:pr-4">
-								<Button variant={'ghost'} size={'sm'} asChild>
-									<a href="#">
-										<WhatsAppIcon className="h-6 w-6 md:h-8 md:w-8" />
-									</a>
-								</Button>
-							</li>
-							<li className="not-last:pr-4">
-								<Button variant={'ghost'} size={'sm'} asChild>
-									<a href="#">
-										<InstagramIcon className="h-6 w-6 md:h-8 md:w-8" />
-									</a>
-								</Button>
-							</li>
+						<ol className="bg-primary divide-foreground/80 hidden gap-4 divide-x rounded-full px-12 py-2 md:flex md:items-center">
+							{(socialLinks.reverse()).map((item, i) => {
+								const IconComponent = HEADER_ICONS[item.social]
+
+								if (!IconComponent) return null
+
+								return (
+									<li className="not-last:pr-4" key={i}>
+										<Button variant={'ghost'} size={'icon'} asChild>
+											<a href={item.link}>
+												<IconComponent className="h-6 w-6 md:h-8 md:w-8" />
+											</a>
+										</Button>
+									</li>
+								)
+							})}
 						</ol>
 					</div>
 				</div>
