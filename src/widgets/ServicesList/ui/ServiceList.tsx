@@ -9,9 +9,9 @@ export const ServiceList = () => {
 	}
 
 	return (
-		<div className={"px-4"}>
+		<div className={'px-4'}>
 			<h2 className="block py-8 text-4xl font-semibold uppercase">Наши услуги</h2>
-			<div className="py-8 overflow-x-hidden">
+			<div className="overflow-x-hidden py-8">
 				<Swiper
 					spaceBetween={10}
 					slidesPerView={1}
