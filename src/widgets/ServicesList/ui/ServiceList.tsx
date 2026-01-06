@@ -13,21 +13,24 @@ export const ServiceList = () => {
 			<h2 className="block py-8 text-4xl font-semibold uppercase">Наши услуги</h2>
 			<div className="overflow-x-hidden py-8">
 				<Swiper
-					spaceBetween={10}
+					spaceBetween={12}
 					slidesPerView={1}
 					breakpoints={{
 						540: {
-							slidesPerView: 2
+							slidesPerView: 2,
+							spaceBetween: 12
 						},
 						768: {
 							slidesPerView: 3,
-							spaceBetween: 25
+							spaceBetween: 24
 						},
 						1024: {
-							slidesPerView: 4
+							slidesPerView: 4,
+							spaceBetween: 24
 						},
 						1200: {
-							slidesPerView: 5
+							slidesPerView: 5,
+							spaceBetween: 24
 						}
 					}}
 					className={'overflow-visible!'}
