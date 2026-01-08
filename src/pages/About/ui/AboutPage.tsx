@@ -2,14 +2,14 @@ import { Button } from '@/shared/ui/Button.tsx'
 
 export const AboutPage = () => {
 	return (
-		<div className="my-30 text-xl">
-			<div className="flex items-center justify-center py-12">
-				<div className="grow border-t-2 border-neutral-600"></div>
-				<h1 className="mx-4 uppercase">О Компании</h1>
-				<div className="grow border-t-2 border-neutral-600"></div>
+		<div className={'my-30 text-xl'}>
+			<div className={'flex items-center justify-center py-12'}>
+				<div className={'grow border-t-2 border-neutral-600'}></div>
+				<h1 className={'mx-4 uppercase'}>О Компании</h1>
+				<div className={'grow border-t-2 border-neutral-600'}></div>
 			</div>
 
-			<div className="container mx-auto px-2">
+			<div className={'container mx-auto px-2'}>
 				<p>Добро пожаловать в "Бишкек Недвижимость" – ваш надежный партнер в мире недвижимости!</p>
 				<p>
 					В динамично развивающемся городе Бишкек, где сочетаются культура и современность, мы, компания
@@ -19,7 +19,7 @@ export const AboutPage = () => {
 				</p>
 
 				<h6>Наши услуги включают:</h6>
-				<ul className="list-disc px-6">
+				<ul className={'list-disc px-6'}>
 					<li>
 						Продажа и аренда жилой недвижимости: Квартиры, дома, элитные апартаменты на любой вкус и бюджет.
 					</li>
@@ -34,7 +34,7 @@ export const AboutPage = () => {
 				</ul>
 
 				<h6>Почему выбирают нас:</h6>
-				<ul className="list-disc px-6">
+				<ul className={'list-disc px-6'}>
 					<li>
 						Индивидуальный подход: Мы учитываем все ваши пожелания и требования, чтобы предложить оптимальные
 						решения.
@@ -55,26 +55,26 @@ export const AboutPage = () => {
 
 				<p>Свяжитесь с нами сегодня и откройте для себя новые возможности с "Бишкек Недвижимость"!</p>
 
-				<section className="contacts py-4">
+				<section className={'contacts py-4'}>
 					<p>Телефон: +996 XXX XXX XXX</p>
 					<p>Email: info@bishkekrealestate.kg</p>
 					<p>Адрес: г. Бишкек, ул. Ленина, д. 123</p>
 				</section>
 
-				<p className="py-4">
+				<p className={'py-4'}>
 					С уважением,
 					<br />
 					Команда "Бишкек Недвижимость"
 				</p>
 			</div>
 
-			<div className="container mx-auto px-2">
+			<div className={'container mx-auto px-2'}>
 				<Button variant={'link'}>
-					<a href="#" className="block py-4">
+					<a href="#" className={'block py-4'}>
 						Поделиться своим выбором с друзьями в соц.сетях
 					</a>
 				</Button>
-				<hr className="border-neutral-600" />
+				<hr className={'border-neutral-600'} />
 			</div>
 		</div>
 	)

@@ -7,7 +7,7 @@ type NavbarLink = {
 
 const navLinks: NavbarLink[] = [
 	{ name: 'Главная', path: PathConstants.HOME },
-	{ name: 'Купить недвижимость', path: PathConstants.HOME },
+	{ name: 'Купить недвижимость', path: PathConstants.REAL_ESTATES },
 	{ name: 'Услуги', path: PathConstants.HOME },
 	{ name: 'О компании', path: PathConstants.ABOUT },
 	{ name: 'FAQ', path: PathConstants.HOME }

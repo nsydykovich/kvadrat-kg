@@ -51,7 +51,7 @@ const CardAction = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 	({ className, children, ...props }, ref) => {
 		return (
-			<div ref={ref} className={cn("py-4", className)} {...props}>
+			<div ref={ref} className={cn('py-4', className)} {...props}>
 				{children}
 			</div>
 		)
@@ -71,7 +71,7 @@ const CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLPara
 const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 	({ className, children, ...props }, ref) => {
 		return (
-			<div ref={ref} className={cn("", className)} {...props}>
+			<div ref={ref} className={cn('', className)} {...props}>
 				{children}
 			</div>
 		)
@@ -81,7 +81,7 @@ const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 	({ className, children, ...props }, ref) => {
 		return (
-			<div ref={ref} className={cn("flex", className)} {...props}>
+			<div ref={ref} className={cn('flex', className)} {...props}>
 				{children}
 			</div>
 		)
@@ -91,7 +91,7 @@ const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 const CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingElement>>(
 	({ className, children, ...props }, ref) => {
 		return (
-			<h4 ref={ref} className={cn("font-bold text-xl", className)} {...props}>
+			<h4 ref={ref} className={cn('text-xl font-bold', className)} {...props}>
 				{children}
 			</h4>
 		)

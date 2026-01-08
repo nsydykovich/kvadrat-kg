@@ -4,9 +4,9 @@ import { Footer } from '@/widgets/Footer.tsx'
 
 export function BaseLayout() {
 	return (
-		<div className="flex min-h-screen flex-col">
+		<div className={'flex min-h-screen flex-col'}>
 			<Header />
-			<main className="grow">
+			<main className={'grow'}>
 				<Outlet />
 			</main>
 			<Footer />

@@ -9,7 +9,7 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
 	{ id: 1, social: 'Instagram', link: '#instagram' },
 	{ id: 2, social: 'WhatsApp', link: '#whatsapp' },
-	{ id: 3, social: 'Telegram', link: '#telegram' },
+	{ id: 3, social: 'Telegram', link: '#telegram' }
 ]
 
 export default socialLinks
