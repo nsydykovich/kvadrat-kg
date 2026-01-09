@@ -3,6 +3,9 @@ import { forwardRef, type HTMLAttributes } from 'react'
 import { cn } from '@/shared/lib/utils.ts'
 import { Swiper, type SwiperRef, SwiperSlide, type SwiperSlideProps } from 'swiper/react'
 import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Navigation, Pagination } from 'swiper/modules'
 
 const carouselVariants = cva('w-full', {
 	variants: {
@@ -43,6 +46,11 @@ const Carousel = forwardRef<SwiperRef, CarouselProps>(
 					ref={ref}
 					className={cn('', carouselVariants({ variant, className }))}
 					slidesPerView={slidesPerView}
+					navigation
+					pagination={{
+						clickable: true
+					}}
+					modules={[Navigation, Pagination]}
 					{...(props as React.ComponentProps<typeof Swiper>)}
 				>
 					{children}

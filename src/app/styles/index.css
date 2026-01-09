@@ -120,3 +120,9 @@
 	--sidebar-border: oklch(0.25 0.01 285.823);
 	--sidebar-ring: oklch(0.5736 0.2189 29.64);
 }
+
+.swiper-button-prev { @apply text-foreground; @apply p-2.5 -ml-2.5! }
+.swiper-button-next { @apply text-foreground; @apply p-2.5 -mr-2.5}
+
+.swiper-pagination-bullet { @apply bg-foreground opacity-100 mx-0.5!; }
+.swiper-pagination-bullet-active { @apply bg-primary; }
