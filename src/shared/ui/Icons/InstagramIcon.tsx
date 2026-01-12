@@ -3,7 +3,7 @@ import React from 'react'
 const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
 	return (
 		<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-			<g clip-path="url(#clip0_86_1748)">
+			<g clipPath="url(#clip0_86_1748)">
 				<path
 					d="M27.9936 3.05176e-05H8.57015C3.83752 3.05176e-05 0.000976562 3.83658 0.000976562 8.5692V27.9926C0.000976562 32.7253 3.83752 36.5618 8.57015 36.5618H27.9936C32.7262 36.5618 36.5628 32.7253 36.5628 27.9926V8.5692C36.5628 3.83658 32.7262 3.05176e-05 27.9936 3.05176e-05Z"
 					fill="url(#paint0_radial_86_1748)"
@@ -26,10 +26,10 @@ const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
 					gradientUnits="userSpaceOnUse"
 					gradientTransform="translate(9.7127 39.3778) rotate(-90) scale(36.2354 33.7018)"
 				>
-					<stop stop-color="#FFDD55" />
-					<stop offset="0.1" stop-color="#FFDD55" />
-					<stop offset="0.5" stop-color="#FF543E" />
-					<stop offset="1" stop-color="#C837AB" />
+					<stop stopColor="#FFDD55" />
+					<stop offset="0.1" stopColor="#FFDD55" />
+					<stop offset="0.5" stopColor="#FF543E" />
+					<stop offset="1" stopColor="#C837AB" />
 				</radialGradient>
 				<radialGradient
 					id="paint1_radial_86_1748"
@@ -39,9 +39,9 @@ const InstagramIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
 					gradientUnits="userSpaceOnUse"
 					gradientTransform="translate(-6.12327 2.63376) rotate(78.681) scale(16.1974 66.7664)"
 				>
-					<stop stop-color="#3771C8" />
-					<stop offset="0.128" stop-color="#3771C8" />
-					<stop offset="1" stop-color="#6600FF" stop-opacity="0" />
+					<stop stopColor="#3771C8" />
+					<stop offset="0.128" stopColor="#3771C8" />
+					<stop offset="1" stopColor="#6600FF" stopOpacity="0" />
 				</radialGradient>
 				<clipPath id="clip0_86_1748">
 					<rect width="36.5618" height="36.5618" fill="white" />

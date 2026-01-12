@@ -11,8 +11,8 @@ interface RealEstateCardProps extends Omit<RealEstate, 'id'> {
 
 const RealEstateCard = ({ description, square, price, onClick }: RealEstateCardProps) => {
 	return (
-		<Card className={'bg-foreground grid rounded p-4 text-xs md:text-lg'}>
-			<CardHeader>
+		<Card className={'bg-foreground grid rounded p-0 text-xs md:text-lg'}>
+			<CardHeader className={'overflow-hidden rounded'}>
 				<Carousel slidesPerView={1}>
 					<CarouselSlide className={'aspect-video'}>
 						<CarouselImage className={'h-full w-full object-cover'} src={realEstateImg} alt="random img #1" />
@@ -31,8 +31,8 @@ const RealEstateCard = ({ description, square, price, onClick }: RealEstateCardP
 					</CarouselSlide>
 				</Carousel>
 			</CardHeader>
-			<CardDescription>{description}</CardDescription>
-			<CardContent>
+			<CardDescription className={'p-4'}>{description}</CardDescription>
+			<CardContent className={'p-4'}>
 				<article className={'real-estate__square flex justify-between'}>
 					<div>Квадрат:</div>
 					<div>
@@ -45,7 +45,7 @@ const RealEstateCard = ({ description, square, price, onClick }: RealEstateCardP
 					<div>{price}&#36;</div>
 				</article>
 			</CardContent>
-			<CardAction>
+			<CardAction className={'p-4'}>
 				<Button className={'rounded-full px-2 py-2'} onClick={onClick} asChild>
 					<a href="#">Подробнее</a>
 				</Button>

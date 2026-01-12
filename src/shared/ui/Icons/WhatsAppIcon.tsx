@@ -3,7 +3,7 @@ import React from 'react'
 const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
 	return (
 		<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-			<g clip-path="url(#clip0_60_1024)">
+			<g clipPath="url(#clip0_60_1024)">
 				<path
 					d="M0.749722 17.4879C0.748899 20.4622 1.52604 23.3663 3.00377 25.926L0.608398 34.6719L9.55872 32.3251C12.0343 33.6727 14.8079 34.3789 17.6265 34.3791H17.6339C26.9387 34.3791 34.5129 26.8076 34.5169 17.5012C34.5187 12.9916 32.7641 8.75109 29.5762 5.56074C26.3889 2.37066 22.1498 0.612898 17.6332 0.61084C8.32742 0.61084 0.753701 8.18195 0.749859 17.4879"
 					fill="url(#paint0_linear_60_1024)"
@@ -26,8 +26,8 @@ const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
 					y2="0.61084"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="#1FAF38" />
-					<stop offset="1" stop-color="#60D669" />
+					<stop stopColor="#1FAF38" />
+					<stop offset="1" stopColor="#60D669" />
 				</linearGradient>
 				<linearGradient
 					id="paint1_linear_60_1024"
@@ -37,8 +37,8 @@ const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
 					y2="0"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="#F9F9F9" />
-					<stop offset="1" stop-color="white" />
+					<stop stopColor="#F9F9F9" />
+					<stop offset="1" stopColor="white" />
 				</linearGradient>
 				<clipPath id="clip0_60_1024">
 					<rect width="35.1251" height="35.3995" fill="white" />

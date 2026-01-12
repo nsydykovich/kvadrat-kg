@@ -27,7 +27,7 @@ const SortTrigger = () => {
 export const RealEstatesPage = () => {
 	return (
 		<section className={'container mx-auto'}>
-			<article className={'flex gap-4 p-4'}>
+			<article className={'flex gap-8 p-4'}>
 				<RealEstateFilterSidebar />
 
 				<div className={'flex-1'}>
