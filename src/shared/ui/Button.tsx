@@ -4,7 +4,7 @@ import { Slot } from 'radix-ui'
 import { cn } from '@/shared/lib/utils.ts'
 
 const buttonVariants = cva(
-	'px-6 py-3 rounded-lg transition-all items-center justify-center font-medium flex',
+	'rounded-lg transition-all items-center justify-center font-medium flex',
 	{
 		variants: {
 			variant: {
@@ -17,10 +17,10 @@ const buttonVariants = cva(
 				ghost: 'bg-transparent text-foreground hover:bg-foreground/10'
 			},
 			size: {
-				sm: 'text-sm px-4 py-2',
-				md: 'text-base px-6 py-3',
-				lg: 'text-lg px-8 py-4',
-				icon: 'text-2xl p-2'
+				sm: 'text-sm px-6 py-2',
+				md: 'text-base px-8 py-3',
+				lg: 'text-lg px-10 py-4',
+				icon: 'text-2xl w-8 h-8'
 			}
 		},
 		defaultVariants: {

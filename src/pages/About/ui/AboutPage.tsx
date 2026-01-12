@@ -2,7 +2,7 @@ import { Button } from '@/shared/ui/Button.tsx'
 
 export const AboutPage = () => {
 	return (
-		<div className={'my-30 text-xl'}>
+		<div className={'my-4 mb-24 text-xl'}>
 			<div className={'flex items-center justify-center py-12'}>
 				<div className={'grow border-t-2 border-neutral-600'}></div>
 				<h1 className={'mx-4 uppercase'}>О Компании</h1>

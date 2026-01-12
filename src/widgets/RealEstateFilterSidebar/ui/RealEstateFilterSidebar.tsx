@@ -1,4 +1,5 @@
 import { Sidebar, SidebarDivider, SidebarHeader, SidebarSection } from '@/shared/ui/Sidebar'
+import { Checkbox } from '@/shared/ui/Checkbox.tsx'
 
 const propertyTypes = [
 	{ id: 'apartment', label: 'Квартира', defaultChecked: true },
@@ -43,9 +44,14 @@ const RealEstateFilterSidebar = () => {
 			<SidebarSection title="Тип недвижимости">
 				<div className={'flex flex-col gap-3'}>
 					{propertyTypes.map((type) => (
-						<div className={'flex'}>
-							<input type="checkbox" key={type.id} id={type.id} defaultChecked={type.defaultChecked} />
-							<label htmlFor="{type.id}">{type.label}</label>
+						<div className={'flex'} key={type.id}>
+							<Checkbox
+								id={type.id}
+								variant={'white'}
+								size={'sm'}
+								label={type.label}
+								defaultChecked={type.defaultChecked}
+							/>
 						</div>
 					))}
 				</div>
@@ -73,9 +79,8 @@ const RealEstateFilterSidebar = () => {
 			<SidebarSection title="Удобства">
 				<div className={'grid grid-cols-2 gap-x-4 gap-y-3'}>
 					{amenities.map((amenity) => (
-						<div className={'flex'}>
-							<input type="checkbox" key={amenity.id} id={amenity.id} />
-							<label htmlFor="{amenity.id}">{amenity.label}</label>
+						<div className={'flex'} key={amenity.id}>
+							<Checkbox id={amenity.id} variant={'white'} size={'sm'} label={amenity.label} />
 						</div>
 					))}
 				</div>
